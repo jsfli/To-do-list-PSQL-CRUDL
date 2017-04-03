@@ -1,0 +1,14 @@
+<h1>Update the <%=@list.name() %></h1>
+<form action="/lists/<%= @list.id() %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+
+  <label for="name">Rename your list:</label>
+  <input id="name" type="text" name="name">
+
+  <button type="submit">Update</button>
+</form>
+
+<form action="/lists/<%= @list.id()%>" method="post">
+  <input name="_method" type="hidden" value="delete">
+  <button type="submit">Delete list</button>
+</form>
